@@ -1,6 +1,6 @@
 //main.js
 // Uma coisa, nos slides não tinha como implementar o botão "adicionar", mas acho que teria sentido pra atividade, então tentei implimentar eu mesmo
-import { getLista, limpaLista, adicionarNaLista } from "./lista.js";
+import { getLista, limpaLista, adicionarNaLista, removeDaLista } from "./lista.js";
 
 const olItens = document.querySelector('#itens');
 const pEntrada = document.querySelector('#entrada');
