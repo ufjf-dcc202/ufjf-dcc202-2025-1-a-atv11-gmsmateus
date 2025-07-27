@@ -1,14 +1,14 @@
 //main.js
 // Uma coisa, nos slides não tinha como implementar o botão "adicionar", mas acho que teria sentido pra atividade, então tentei implimentar eu mesmo
-import { getLista, limpaLista, adicionarNaLista, removeDaLista } from "./lista.js";
+import { getLista, limpaLista, adicionaNaLista, removeDaLista } from "./lista.js";
 
 const olItens = document.querySelector('#itens');
 const pEntrada = document.querySelector('#entrada');
 const btnAdicionar = document.querySelector('#adicionar');
 const btnLimpar = document.querySelector('#limpar');
 
-btnLimpar.addEventListener('click', limparItensDaLista);
-btnAdicionar.addEventListener('click', adicionarItemNaLista);
+btnLimpar.addEventListener('click', limpaItensDaLista);
+btnAdicionar.addEventListener('click', adicionaItemNaLista);
 
 atualizarLista();
 
@@ -22,14 +22,14 @@ function atualizarLista() {
     }
 }
 
-function limparItensDaLista(){
+function limpaItensDaLista(){
     limpaLista();
     atualizarLista();
 }
 
-function adicionarItemNaLista(){
+function adicionaItemNaLista(){
     const item = pEntrada.textContent.trim();
-    adicionarNaLista(item);
+    adicionaNaLista(item);
     pEntrada.textContent="";
     atualizarLista();
 }
